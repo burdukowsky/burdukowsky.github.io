@@ -1,24 +1,18 @@
 import { FC } from 'react';
 
-import './App.scss';
+import { Space } from './app/components/space/Space';
+import { Content } from './app/layout/content/Content';
+import { Header } from './app/layout/header/Header';
+import { Menu } from './app/layout/menu/Menu';
 
 export const App: FC = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Space>
+      <Menu />
+      <Space direction='column'>
+        <Header />
+        <Content />
+      </Space>
+    </Space>
   );
 };

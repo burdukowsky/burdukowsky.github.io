@@ -1,5 +1,6 @@
 import { Children, CSSProperties, useMemo } from 'react';
 import { Property } from 'csstype';
+import classNames from 'classnames';
 
 import { FCC } from '../../utils/utility-types';
 import styles from './Space.module.scss';
@@ -11,6 +12,7 @@ interface Props {
   wrap?: Property.FlexWrap | boolean;
   width?: Property.Width;
   height?: Property.Height;
+  className?: string;
   style?: CSSProperties;
   childrenFlex?: Property.Flex[];
 }
@@ -23,6 +25,7 @@ export const Space: FCC<Props> = ({
   width,
   height,
   childrenFlex,
+  className,
   style: baseStyle,
   children,
 }) => {
@@ -46,7 +49,7 @@ export const Space: FCC<Props> = ({
   }, [baseStyle, direction, flexWrap, gap, height, justifyContent, width]);
 
   return (
-    <div className={styles.Space} style={style}>
+    <div className={classNames(styles.Space, className)} style={style}>
       {Children.map(children, (child, index) => (
         <div style={{ flex: childrenFlex?.[index] }}>{child}</div>
       ))}

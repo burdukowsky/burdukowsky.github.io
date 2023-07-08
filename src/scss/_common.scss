@@ -23,6 +23,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--body-bg-color);
   color: var(--body-color);
+
+  > #root {
+    height: 100%;
+  }
 }
 
 code {

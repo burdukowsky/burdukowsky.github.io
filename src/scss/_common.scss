@@ -11,7 +11,10 @@
 
 html, body {
   height: 100%;
-  background-color: var(--body-bg-color);
+}
+
+html {
+  background-color: black;
 }
 
 body {

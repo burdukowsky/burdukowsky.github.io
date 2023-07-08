@@ -2,14 +2,24 @@ import { useMobileMediaQuery } from '../../../hooks/media-queries';
 import { FCC } from '../../../utils/utility-types';
 import { Space } from '../../../components/space/Space';
 
-export const MenuContainer: FCC = ({ children }) => {
+interface Props {
+  className?: string;
+}
+
+export const MenuContainer: FCC<Props> = ({ className, children }) => {
   const mobile = useMobileMediaQuery();
   return mobile ? (
-    <Space gap='35px' justifyContent='center' wrap>
+    <Space gap='35px' justifyContent='center' wrap className={className}>
       {children}
     </Space>
   ) : (
-    <Space direction='column' justifyContent='center' height='100%' gap='15px'>
+    <Space
+      direction='column'
+      justifyContent='center'
+      height='100%'
+      gap='15px'
+      className={className}
+    >
       {children}
     </Space>
   );

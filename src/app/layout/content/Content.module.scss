@@ -1,0 +1,8 @@
+@import "~scss/media";
+
+.Content {
+  background-color: var(--surface);
+  @include desktop {
+    height: 100%;
+  }
+}

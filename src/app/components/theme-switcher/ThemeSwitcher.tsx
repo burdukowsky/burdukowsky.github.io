@@ -3,7 +3,6 @@ import { FC, useCallback, useEffect } from 'react';
 import { Icon, IconType } from '../icon/Icon';
 import { Button } from '../button/Button';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { localStoragePrefix } from '../../globals';
 
 type Theme = 'default' | 'dark-theme';
 
@@ -13,10 +12,7 @@ const map: Record<Theme, IconType> = {
 };
 
 export const ThemeSwitcher: FC = () => {
-  const [theme, setTheme] = useLocalStorage<Theme>(
-    `${localStoragePrefix}theme`,
-    'dark-theme',
-  );
+  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'dark-theme');
 
   useEffect(() => {
     document.body.className = theme === 'default' ? '' : theme;

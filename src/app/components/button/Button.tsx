@@ -19,7 +19,7 @@ export const Button: FCC<Props> = ({
     return (
       classNames(styles.Button, {
         [styles.ButtonIcon]: icon,
-      }) + ` ${className}`
+      }) + ` ${className ?? ''}`
     );
   }, [className, icon]);
 

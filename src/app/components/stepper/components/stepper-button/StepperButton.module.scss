@@ -1,29 +1,42 @@
 $radius: 15px;
-
-.StepperButtonWrap {
-  background: linear-gradient(to right, red, purple);
-  padding: 3px;
-  border-radius: $radius * 1.2;
-}
+$transition-duration: 150ms;
 
 .StepperButton {
+  background: linear-gradient(-30deg, red, purple, purple, orange);
+  padding: 3px;
+  border-radius: $radius * 1.2;
+  transition: background $transition-duration ease-out;
+  background-size: 200% 100%;
   cursor: pointer;
-  background-color: var(--surface);
   border: none;
   font-weight: bold;
-  border-radius: $radius;
-  padding: 10px;
   line-height: 1;
   font-size: 15px;
   color: var(--primary);
-  transition: background-color 150ms;
 
   &:hover {
-    background-color: var(--surface-opacity-80);
+    &:not(.StepperButtonActive) {
+      background-position: 100%;
+
+      > .StepperButtonWrap {
+        background-color: var(--surface-opacity-80);
+      }
+    }
   }
 
   &.StepperButtonActive {
-    background-color: transparent;
+    background-position: 100%;
     color: white;
+
+    > .StepperButtonWrap {
+      background-color: transparent;
+    }
+  }
+
+  > .StepperButtonWrap {
+    background-color: var(--surface);
+    padding: 10px;
+    transition: background-color $transition-duration;
+    border-radius: $radius;
   }
 }

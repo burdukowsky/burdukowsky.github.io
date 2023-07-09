@@ -19,15 +19,13 @@ export const StepperButton: FCC<Props> = ({
     return (
       classNames(styles.StepperButton, {
         [styles.StepperButtonActive]: active,
-      }) + ` ${className}`
+      }) + ` ${className ?? ''}`
     );
   }, [active, className]);
 
   return (
-    <div className={styles.StepperButtonWrap}>
-      <button {...buttonProps} type={type} className={computedClassName}>
-        {children}
-      </button>
-    </div>
+    <button {...buttonProps} type={type} className={computedClassName}>
+      <div className={styles.StepperButtonWrap}>{children}</div>
+    </button>
   );
 };

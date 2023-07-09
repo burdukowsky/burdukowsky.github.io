@@ -1,17 +1,17 @@
 import { ButtonHTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { FCC } from '../../utils/utility-types';
-import styles from './Button.module.scss';
+import { FCC } from 'app/utils/utility-types';
+import styles from './StepperButton.module.scss';
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
-  icon?: boolean;
+  active?: boolean;
 }
 
-export const Button: FCC<Props> = ({
+export const StepperButton: FCC<Props> = ({
   type = 'button',
   className,
-  icon = false,
+  active,
   children,
   ...buttonProps
 }) => {
@@ -20,8 +20,8 @@ export const Button: FCC<Props> = ({
       {...buttonProps}
       type={type}
       className={
-        classNames(styles.Button, {
-          [styles.ButtonIcon]: icon,
+        classNames(styles.StepperButton, {
+          [styles.StepperButtonActive]: active,
         }) + ` ${className}`
       }
     >

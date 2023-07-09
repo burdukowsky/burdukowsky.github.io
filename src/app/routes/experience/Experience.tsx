@@ -1,9 +1,8 @@
-import { FC, useState } from 'react';
+import { FC, useMemo } from 'react';
 
-import { Space } from '../../components/space/Space';
-import { Button } from '../../components/button/Button';
 import { XP } from '../../types';
 import { ExperienceView } from './components/experience-view/ExperienceView';
+import { Stepper, StepperStep } from '../../components/stepper/Stepper';
 
 const myXp: XP[] = [
   {
@@ -71,25 +70,16 @@ const myXp: XP[] = [
 ];
 
 export const Experience: FC = () => {
-  const [selected, setSelected] = useState(myXp[0]);
+  const steps = useMemo<StepperStep[]>(() => {
+    return myXp.map(xp => ({
+      title: `${xp.from} - ${xp.to}`,
+      content: <ExperienceView value={xp} />,
+    }));
+  }, []);
 
-  if (myXp.length === 0) {
+  if (steps.length === 0) {
     return <>No experience</>;
   }
 
-  return (
-    <div>
-      <Space justifyContent='space-between'>
-        {myXp.map((xp, index) => {
-          return (
-            <Button
-              key={index}
-              onClick={() => setSelected(xp)}
-            >{`${xp.from} - ${xp.to}`}</Button>
-          );
-        })}
-      </Space>
-      {selected != null && <ExperienceView value={selected} />}
-    </div>
-  );
+  return <Stepper steps={steps} />;
 };

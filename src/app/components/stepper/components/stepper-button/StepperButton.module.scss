@@ -1,0 +1,16 @@
+.StepperButton {
+  cursor: pointer;
+  background-color: transparent;
+  border: 3px solid var(--primary);
+  font-weight: bold;
+  border-radius: 15px;
+  padding: 10px;
+  line-height: 1;
+  font-size: 15px;
+  color: var(--primary);
+
+  &.StepperButtonActive {
+    background-color: var(--primary);
+    color: white;
+  }
+}

@@ -5,6 +5,9 @@ import { RouterProvider } from 'react-router-dom';
 import './scss/index.scss';
 import reportWebVitals from './reportWebVitals';
 import { router } from './app/router';
+import { configureInitialTheme } from './app/utils/common';
+
+configureInitialTheme();
 
 const root = ReactDOM.createRoot(document.getElementById('root')!);
 root.render(

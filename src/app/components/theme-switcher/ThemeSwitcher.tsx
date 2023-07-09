@@ -3,8 +3,9 @@ import { FC, useCallback, useEffect } from 'react';
 import { Icon, IconType } from '../icon/Icon';
 import { Button } from '../button/Button';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-
-type Theme = 'default' | 'dark-theme';
+import { Theme } from '../../types';
+import { setColorTheme } from '../../utils/common';
+import { defaultTheme, lsThemeKey } from '../../globals';
 
 const map: Record<Theme, IconType> = {
   default: 'DarkMode',
@@ -12,10 +13,10 @@ const map: Record<Theme, IconType> = {
 };
 
 export const ThemeSwitcher: FC = () => {
-  const [theme, setTheme] = useLocalStorage<Theme>('theme', 'dark-theme');
+  const [theme, setTheme] = useLocalStorage<Theme>(lsThemeKey, defaultTheme);
 
   useEffect(() => {
-    document.body.className = theme === 'default' ? '' : theme;
+    setColorTheme(theme);
   }, [theme]);
 
   const onClick = useCallback(() => {

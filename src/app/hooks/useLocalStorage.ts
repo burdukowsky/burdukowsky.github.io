@@ -1,31 +1,21 @@
-import { useEffect, useMemo, useState } from 'react';
-import { localStoragePrefix } from '../globals';
+import { useEffect, useState } from 'react';
+
+import {
+  getLocalStorageValue,
+  setLocalStorageValue,
+} from '../utils/local-storage';
 
 export function useLocalStorage<T>(
   key: string,
   defaultValue: T,
 ): [T, (val: T) => void] {
-  const lsKey = useMemo(() => {
-    return localStoragePrefix + key;
-  }, [key]);
-
   const [value, setValue] = useState(() => {
-    let currentValue;
-
-    try {
-      currentValue = JSON.parse(
-        localStorage.getItem(lsKey) ?? String(defaultValue),
-      );
-    } catch (error) {
-      currentValue = defaultValue;
-    }
-
-    return currentValue;
+    return getLocalStorageValue(key, defaultValue);
   });
 
   useEffect(() => {
-    localStorage.setItem(lsKey, JSON.stringify(value));
-  }, [value, lsKey]);
+    setLocalStorageValue(key, value);
+  }, [value, key]);
 
   return [value, setValue];
 }

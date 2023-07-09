@@ -1,9 +1,17 @@
+$radius: 15px;
+
+.StepperButtonWrap {
+  background: linear-gradient(to right, red, purple);
+  padding: 3px;
+  border-radius: $radius * 1.2;
+}
+
 .StepperButton {
   cursor: pointer;
-  background-color: transparent;
-  border: 3px solid var(--primary);
+  background-color: var(--surface);
+  border: none;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: $radius;
   padding: 10px;
   line-height: 1;
   font-size: 15px;
@@ -11,11 +19,11 @@
   transition: background-color 150ms;
 
   &:hover {
-    background-color: var(--primary-opacity-10);
+    background-color: var(--surface-opacity-80);
   }
 
   &.StepperButtonActive {
-    background-color: var(--primary);
+    background-color: transparent;
     color: white;
   }
 }

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, useMemo } from 'react';
 import classNames from 'classnames';
 
 import { FCC } from '../../utils/utility-types';
@@ -15,16 +15,16 @@ export const Button: FCC<Props> = ({
   children,
   ...buttonProps
 }) => {
+  const computedClassName = useMemo(() => {
+    return (
+      classNames(styles.Button, {
+        [styles.ButtonIcon]: icon,
+      }) + ` ${className}`
+    );
+  }, [className, icon]);
+
   return (
-    <button
-      {...buttonProps}
-      type={type}
-      className={
-        classNames(styles.Button, {
-          [styles.ButtonIcon]: icon,
-        }) + ` ${className}`
-      }
-    >
+    <button {...buttonProps} type={type} className={computedClassName}>
       {children}
     </button>
   );

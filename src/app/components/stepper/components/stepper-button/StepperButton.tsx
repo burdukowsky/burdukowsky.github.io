@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, useMemo } from 'react';
 import classNames from 'classnames';
 
 import { FCC } from 'app/utils/utility-types';
@@ -15,17 +15,19 @@ export const StepperButton: FCC<Props> = ({
   children,
   ...buttonProps
 }) => {
+  const computedClassName = useMemo(() => {
+    return (
+      classNames(styles.StepperButton, {
+        [styles.StepperButtonActive]: active,
+      }) + ` ${className}`
+    );
+  }, [active, className]);
+
   return (
-    <button
-      {...buttonProps}
-      type={type}
-      className={
-        classNames(styles.StepperButton, {
-          [styles.StepperButtonActive]: active,
-        }) + ` ${className}`
-      }
-    >
-      {children}
-    </button>
+    <div className={styles.StepperButtonWrap}>
+      <button {...buttonProps} type={type} className={computedClassName}>
+        {children}
+      </button>
+    </div>
   );
 };

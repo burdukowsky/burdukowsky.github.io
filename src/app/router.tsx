@@ -1,11 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { Resume } from './routes/resume/Resume';
-import { Education } from './routes/education/Education';
-import { Contacts } from './routes/contacts/Contacts';
-import { ErrorPage } from './routes/error-page/ErrorPage';
 import { Root } from './routes/root/Root';
-import { Main } from './routes/main/Main';
+import { Experience } from './routes/experience/Experience';
+import { Education } from './routes/education/Education';
+import { Portfolio } from './routes/portfolio/Portfolio';
+import { ErrorPage } from './routes/error-page/ErrorPage';
 
 export const router = createBrowserRouter([
   {
@@ -13,10 +12,9 @@ export const router = createBrowserRouter([
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Main /> },
-      { path: 'resume', element: <Resume /> },
+      { index: true, element: <Experience /> },
       { path: 'edu', element: <Education /> },
-      { path: 'contacts', element: <Contacts /> },
+      { path: 'portfolio', element: <Portfolio /> },
     ],
   },
 ]);

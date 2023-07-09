@@ -7,10 +7,9 @@ import styles from './Menu.module.scss';
 export const Menu: FC = () => {
   return (
     <MenuContainer className={styles.Menu}>
-      <Link to='/'>Me</Link>
-      <Link to='/resume'>Resume</Link>
+      <Link to='/'>Experience</Link>
       <Link to='/edu'>Education</Link>
-      <Link to='/contacts'>Contacts</Link>
+      <Link to='/portfolio'>Portfolio</Link>
     </MenuContainer>
   );
 };

@@ -1,11 +1,5 @@
-$primary: #F44336;
+@import "mixin";
 
 :root {
-  --primary: #{$primary};
-  --primary-dark: #D32F2F;
-  --primary-light: #f77066;
-  --primary-opacity-10: #{rgba($primary, .1)};
-  --background: #BDBDBD;
-  --surface: #FFFFFF;
-  --text: black;
+  @include theme(#F44336, #BDBDBD, #FFFFFF, black);
 }

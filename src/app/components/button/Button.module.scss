@@ -1,0 +1,33 @@
+$text: white;
+
+.Button {
+  font-family: inherit;
+  background-color: var(--primary);
+  color: $text;
+  border: none;
+  cursor: pointer;
+  transition: background-color 150ms;
+  font-size: inherit;
+  border-radius: 3px;
+  padding: 3px 10px;
+  line-height: 1;
+
+  &:hover {
+    background-color: var(--primary-light);
+  }
+
+  &:active {
+    background-color: var(--primary-dark);
+  }
+
+  &.ButtonIcon {
+    border-radius: 50%;
+    padding: 0;
+    width: 35px;
+    height: 35px;
+
+    & > svg {
+      fill: $text !important;
+    }
+  }
+}

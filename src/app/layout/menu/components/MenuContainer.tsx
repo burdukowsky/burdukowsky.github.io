@@ -1,6 +1,6 @@
-import { useMobileMediaQuery } from '../../../hooks/media-queries';
-import { FCC } from '../../../utils/utility-types';
-import { Space } from '../../../components/space/Space';
+import { useMobileMediaQuery } from 'app/hooks/media-queries';
+import { FCC } from 'app/utils/utility-types';
+import { Space } from 'app/components/space/Space';
 
 interface Props {
   className?: string;

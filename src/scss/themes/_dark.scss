@@ -1,7 +1,10 @@
+$primary: #C69749;
+
 body.dark-theme {
-  --primary: #C69749;
+  --primary: #{$primary};
   --primary-dark: #735F32;
   --primary-light: #d2ad70;
+  --primary-opacity-10: #{rgba($primary, .1)};
   --background: #000000;
   --surface: #282A3A;
   --text: white;

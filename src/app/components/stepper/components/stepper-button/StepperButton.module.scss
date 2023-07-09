@@ -8,6 +8,11 @@
   line-height: 1;
   font-size: 15px;
   color: var(--primary);
+  transition: background-color 150ms;
+
+  &:hover {
+    background-color: var(--primary-opacity-10);
+  }
 
   &.StepperButtonActive {
     background-color: var(--primary);

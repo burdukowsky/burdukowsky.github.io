@@ -1,7 +1,10 @@
+$primary: #F44336;
+
 :root {
-  --primary: #F44336;
+  --primary: #{$primary};
   --primary-dark: #D32F2F;
   --primary-light: #f77066;
+  --primary-opacity-10: #{rgba($primary, .1)};
   --background: #BDBDBD;
   --surface: #FFFFFF;
   --text: black;

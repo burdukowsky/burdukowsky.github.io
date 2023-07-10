@@ -21,20 +21,22 @@ export const ExperienceView: FC<Props> = ({
 }) => {
   return (
     <Space direction='column'>
-      <Space as='h3' gap='8px'>
-        {position}
-        <Icon name='At' />
-        {orgSite == null ? (
-          <span>{org}</span>
-        ) : (
-          <a href={orgSite} target='_blank' rel='noreferrer'>
-            {org}
-          </a>
-        )}
-      </Space>
-      <Space as='p' gap='4px' alignItems='center'>
-        <Icon name='Place' />
-        {location}
+      <Space gap='8px' justifyContent='space-between'>
+        <Space as='h3' gap='8px'>
+          {position}
+          <Icon name='At' />
+          {orgSite == null ? (
+            <span>{org}</span>
+          ) : (
+            <a href={orgSite} target='_blank' rel='noreferrer'>
+              {org}
+            </a>
+          )}
+        </Space>
+        <Space as='p' gap='4px' alignItems='center'>
+          <Icon name='Place' />
+          {location}
+        </Space>
       </Space>
       {description != null && <p>{description}</p>}
       <h4>Responsibilities:</h4>

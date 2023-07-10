@@ -1,0 +1,31 @@
+$color: white;
+
+.MenuLink {
+  font-weight: 600;
+  font-size: 18px;
+
+  &:link {
+    color: $color;
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: $color;
+  }
+
+  > .MenuLinkWrap {
+    background-color: var(--primary-dark);
+    padding: 3px 10px;
+  }
+
+  display: inline-flex;
+  background: linear-gradient(-45deg, transparent 50%, $color 50%, $color 100%);
+  transition: background 300ms ease-out;
+  padding: 3px;
+  background-size: calc(200% + 40px) 100%;
+  background-position: 100%;
+
+  &.MenuLinkActive, &:hover {
+    background-position: 0;
+  }
+}

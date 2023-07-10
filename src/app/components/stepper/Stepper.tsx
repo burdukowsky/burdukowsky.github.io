@@ -16,7 +16,7 @@ export const Stepper: FC<Props> = ({ steps }) => {
   const [selected, setSelected] = useState(steps[0]);
 
   return (
-    <div>
+    <Space direction='column' gap='1em'>
       <Space justifyContent='space-between' gap='10px' wrap>
         {steps.map((step, index) => {
           return (
@@ -31,6 +31,6 @@ export const Stepper: FC<Props> = ({ steps }) => {
         })}
       </Space>
       {selected != null && selected.content}
-    </div>
+    </Space>
   );
 };

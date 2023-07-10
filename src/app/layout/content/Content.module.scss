@@ -2,6 +2,7 @@
 
 .Content {
   background-color: var(--surface);
+  padding: 30px;
   @include desktop {
     height: 100%;
   }

@@ -25,7 +25,7 @@ export const ThemeSwitcher: FC = () => {
 
   return (
     <Button icon onClick={onClick}>
-      <Icon name={map[theme]} />
+      <Icon name={map[theme]} size='25px' />
     </Button>
   );
 };

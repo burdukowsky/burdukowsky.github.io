@@ -1,0 +1,29 @@
+h3, h4, p {
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+
+ul {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  padding-left: 35px;
+}
+
+a {
+  &:link {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: var(--primary);
+  }
+
+  &:hover {
+    color: var(--primary-light);
+  }
+
+  &:active {
+    color: var(--primary-dark);
+  }
+}

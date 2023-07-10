@@ -1,7 +1,9 @@
 @import "~scss/media";
+@import "~scss/vars";
 
 .Header {
   background-color: var(--surface);
+  padding: $section-padding;
   @include desktop {
     height: 100%;
   }

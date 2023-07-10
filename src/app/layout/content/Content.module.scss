@@ -3,7 +3,7 @@
 
 .Content {
   background-color: var(--surface);
-  padding: $section-padding;
+  padding: 0 $section-padding $section-padding $section-padding;
   @include desktop {
     height: 100%;
   }

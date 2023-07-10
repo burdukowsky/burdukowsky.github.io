@@ -17,6 +17,7 @@ interface Props {
   className?: string;
   style?: CSSProperties;
   childrenFlex?: Property.Flex[];
+  childrenStyle?: CSSProperties[];
 }
 
 export const Space: FCC<Props> = ({
@@ -29,6 +30,7 @@ export const Space: FCC<Props> = ({
   width,
   height,
   childrenFlex,
+  childrenStyle,
   className,
   style: baseStyle,
   children,
@@ -69,7 +71,9 @@ export const Space: FCC<Props> = ({
       style,
     },
     Children.map(children, (child, index) => (
-      <span style={{ flex: childrenFlex?.[index] }}>{child}</span>
+      <span style={{ flex: childrenFlex?.[index], ...childrenStyle?.[index] }}>
+        {child}
+      </span>
     )),
   );
 };

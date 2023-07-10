@@ -17,7 +17,7 @@ export const Stepper: FC<Props> = ({ steps }) => {
 
   return (
     <Space direction='column' gap='1em'>
-      <Space justifyContent='space-between' gap='10px' wrap>
+      <Space justifyContent='space-between' gap='15px' wrap>
         {steps.map((step, index) => {
           return (
             <StepperButton

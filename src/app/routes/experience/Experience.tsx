@@ -7,7 +7,7 @@ import { Stepper, StepperStep } from '../../components/stepper/Stepper';
 const myXp: XP[] = [
   {
     position: 'Lead Developer',
-    org: 'LLC "RT MIS"',
+    org: 'RT MIS',
     orgSite: 'https://rtmis.ru/',
     from: 'May 2021',
     to: 'Ongoing',
@@ -23,7 +23,7 @@ const myXp: XP[] = [
   },
   {
     position: 'Team Leader',
-    org: 'Eltex',
+    org: 'ELTEX',
     orgSite: 'https://eltex-co.com/',
     from: 'Apr 2017',
     to: 'Apr 2021',

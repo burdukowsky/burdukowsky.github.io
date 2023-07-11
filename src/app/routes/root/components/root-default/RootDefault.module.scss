@@ -1,4 +1,10 @@
+$shadow-color: rgba(0, 0, 0, .1);
+$shadow-blur-radius: 25px;
+$shadow-offset-x: 10px;
+$shadow-offset-y: 0;
+
 .RootDefault {
   margin: 0 auto;
   max-width: 1250px;
+  box-shadow: $shadow-color $shadow-offset-x $shadow-offset-y $shadow-blur-radius, $shadow-color #{-$shadow-offset-x} $shadow-offset-y $shadow-blur-radius;
 }

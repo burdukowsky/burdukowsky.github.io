@@ -32,7 +32,14 @@ body {
   color: var(--text);
 
   > #root {
-    height: 100%;
+    display: table;
+    height: inherit;
+    width: 100%;
+
+    > #rootChild {
+      display: table-cell;
+      height: inherit;
+    }
   }
 }
 

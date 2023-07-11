@@ -6,5 +6,5 @@ import { RootMobile } from './components/root-mobile/RootMobile';
 
 export const Root: FC = () => {
   const mobile = useMobileMediaQuery();
-  return mobile ? <RootMobile /> : <RootDefault />;
+  return <div id='rootChild'>{mobile ? <RootMobile /> : <RootDefault />}</div>;
 };

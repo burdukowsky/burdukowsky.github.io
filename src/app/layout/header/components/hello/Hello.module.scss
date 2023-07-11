@@ -1,0 +1,7 @@
+.Hello {
+  * {
+    $margin: .15em;
+    margin-top: $margin;
+    margin-bottom: $margin;
+  }
+}

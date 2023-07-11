@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { Project } from '../../types';
 import { Space } from '../../components/space/Space';
 import { ProjectView } from './components/project-view/ProjectView';
-import { AppText } from '../../components/text/Text';
+import { AppText } from '../../components/app-text/AppText';
 
 const myProjects: Project[] = [
   {

@@ -11,7 +11,7 @@ $transition-duration: 150ms;
   border: none;
   font-weight: bold;
   line-height: 1;
-  font-size: 15px;
+  font-size: inherit;
   color: var(--primary);
 
   &:hover {

@@ -1,5 +1,5 @@
 @import "mixin";
 
-body.dark-theme {
+html.dark-theme {
   @include theme(#C69749, #000000, #282A3A, white);
 }

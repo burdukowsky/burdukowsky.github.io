@@ -14,7 +14,12 @@ html, body {
 }
 
 html {
-  background-color: black;
+  @include mobile {
+    background-color: var(--surface);
+  }
+  @include desktop {
+    background: linear-gradient(90deg, var(--background-primary) 50%, var(--background-surface) 50%, var(--background-surface) 100%);
+  }
 }
 
 body {
@@ -25,13 +30,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text);
-
-  @include mobile {
-    background-color: var(--surface);
-  }
-  @include desktop {
-    background: linear-gradient(90deg, var(--background-primary) 50%, var(--background-surface) 50%, var(--background-surface) 100%);
-  }
 
   > #root {
     height: 100%;

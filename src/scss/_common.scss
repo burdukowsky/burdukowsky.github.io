@@ -27,10 +27,10 @@ body {
   color: var(--text);
 
   @include mobile {
-    background-color: var(--background);
+    background-color: var(--surface);
   }
   @include desktop {
-    background: linear-gradient(90deg, var(--primary-dark) 50%, var(--surface) 50%, var(--surface) 100%);
+    background: linear-gradient(90deg, var(--background-primary) 50%, var(--background-surface) 50%, var(--background-surface) 100%);
   }
 
   > #root {

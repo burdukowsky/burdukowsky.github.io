@@ -1,12 +1,11 @@
 import React, { Children, createElement, CSSProperties, useMemo } from 'react';
 import { Property } from 'csstype';
-import classNames from 'classnames';
 
 import { FCC } from '../../utils/utility-types';
-import styles from './Space.module.scss';
 
 interface Props {
   as?: keyof React.JSX.IntrinsicElements;
+  inline?: boolean;
   direction?: Property.FlexDirection;
   gap?: Property.Gap;
   justifyContent?: Property.JustifyContent;
@@ -16,12 +15,13 @@ interface Props {
   height?: Property.Height;
   className?: string;
   style?: CSSProperties;
-  childrenFlex?: Property.Flex[];
+  childrenFlex?: Array<Property.Flex | undefined>;
   childrenStyle?: CSSProperties[];
 }
 
 export const Space: FCC<Props> = ({
   as = 'div',
+  inline = false,
   direction,
   gap,
   justifyContent,
@@ -44,6 +44,7 @@ export const Space: FCC<Props> = ({
 
   const style = useMemo<CSSProperties>(() => {
     return {
+      display: inline ? 'inline-flex' : 'flex',
       flexDirection: direction,
       gap,
       justifyContent,
@@ -60,20 +61,24 @@ export const Space: FCC<Props> = ({
     flexWrap,
     gap,
     height,
+    inline,
     justifyContent,
     width,
   ]);
 
   return createElement(
     as,
-    {
-      className: classNames(styles.Space, className),
-      style,
-    },
-    Children.map(children, (child, index) => (
-      <span style={{ flex: childrenFlex?.[index], ...childrenStyle?.[index] }}>
-        {child}
-      </span>
-    )),
+    { className, style },
+    Children.map(
+      children,
+      (child, index) =>
+        child != null && (
+          <span
+            style={{ flex: childrenFlex?.[index], ...childrenStyle?.[index] }}
+          >
+            {child}
+          </span>
+        ),
+    ),
   );
 };

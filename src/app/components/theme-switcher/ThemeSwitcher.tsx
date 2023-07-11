@@ -8,8 +8,8 @@ import { setColorTheme } from '../../utils/common';
 import { defaultTheme, lsThemeKey } from '../../globals';
 
 const map: Record<Theme, IconType> = {
-  default: 'DarkMode',
-  'dark-theme': 'LightMode',
+  default: 'darkMode',
+  'dark-theme': 'lightMode',
 };
 
 export const ThemeSwitcher: FC = () => {

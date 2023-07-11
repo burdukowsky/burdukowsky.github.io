@@ -23,3 +23,15 @@ export interface Edu {
   location: string;
   achievements?: string[];
 }
+
+export type ProjectPlatform = 'android' | 'npm' | 'extension';
+
+export interface Project {
+  name: string;
+  platform: ProjectPlatform;
+  description: string;
+  link?: string;
+  github: string;
+  downloadLink?: string;
+  demoLink?: string;
+}

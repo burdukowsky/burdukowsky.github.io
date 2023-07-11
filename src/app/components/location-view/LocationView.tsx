@@ -5,7 +5,7 @@ import { FCC } from '../../utils/utility-types';
 export const LocationView: FCC = ({ children }) => {
   return (
     <Space as='p' gap='4px' alignItems='center'>
-      <Icon name='Place' />
+      <Icon name='place' />
       {children}
     </Space>
   );

@@ -27,7 +27,7 @@ export const ExperienceView: FC<Props> = ({
       <Space gap='8px' justifyContent='space-between'>
         <Space as='h3' gap='8px'>
           {position}
-          <Icon name='At' />
+          <Icon name='at' />
           <OrgView name={org} site={orgSite} />
         </Space>
         <LocationView>{location}</LocationView>

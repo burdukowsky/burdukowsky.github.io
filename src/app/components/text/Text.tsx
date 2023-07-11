@@ -15,6 +15,7 @@ interface Props {
   color?: TextColor;
   size?: Property.FontSize;
   weight?: Property.FontWeight;
+  align?: Property.TextAlign;
   className?: string;
   style?: CSSProperties;
 }
@@ -24,6 +25,7 @@ export const AppText: FCC<Props> = ({
   color,
   size,
   weight,
+  align,
   className,
   style,
   children,
@@ -36,6 +38,7 @@ export const AppText: FCC<Props> = ({
         color: `var(--${color})`,
         fontSize: size,
         fontWeight: weight,
+        textAlign: align,
         ...style,
       },
     },

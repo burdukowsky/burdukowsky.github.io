@@ -3,6 +3,9 @@ import { FC } from 'react';
 import { XP } from 'app/types';
 import { Space } from 'app/components/space/Space';
 import { Icon } from 'app/components/icon/Icon';
+import { List } from 'app/components/list/List';
+import { LocationView } from 'app/components/location-view/LocationView';
+import { OrgView } from 'app/components/org-view/OrgView';
 
 interface Props {
   value: XP;
@@ -25,35 +28,14 @@ export const ExperienceView: FC<Props> = ({
         <Space as='h3' gap='8px'>
           {position}
           <Icon name='At' />
-          {orgSite == null ? (
-            <span>{org}</span>
-          ) : (
-            <a href={orgSite} target='_blank' rel='noreferrer'>
-              {org}
-            </a>
-          )}
+          <OrgView name={org} site={orgSite} />
         </Space>
-        <Space as='p' gap='4px' alignItems='center'>
-          <Icon name='Place' />
-          {location}
-        </Space>
+        <LocationView>{location}</LocationView>
       </Space>
       {description != null && <p>{description}</p>}
-      <h4>Responsibilities:</h4>
-      <ul>
-        {responsibilities.map((r, i) => (
-          <li key={i}>{r}</li>
-        ))}
-      </ul>
+      <List title='Responsibilities' items={responsibilities} />
       {achievements != null && (
-        <>
-          <h4>Achievements:</h4>
-          <ul>
-            {achievements.map((r, i) => (
-              <li key={i}>{r}</li>
-            ))}
-          </ul>
-        </>
+        <List title='Achievements' items={achievements} />
       )}
     </Space>
   );

@@ -11,3 +11,15 @@ export interface XP {
   responsibilities: string[];
   achievements?: string[];
 }
+
+export interface Edu {
+  title: string;
+  qualification: string;
+  form: string;
+  org: string;
+  orgSite?: string;
+  from: string;
+  to: string;
+  location: string;
+  achievements?: string[];
+}

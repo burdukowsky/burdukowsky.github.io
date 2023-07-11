@@ -23,7 +23,7 @@ export const Header: FC = () => {
         childrenStyle={[{ alignSelf: 'end' }, { alignSelf: 'center' }]}
       >
         <ThemeSwitcher />
-        {!mobile && <img src='img/coder.png' alt='Me' width='256px' />}
+        {!mobile && <img src='img/coder.png' alt='Me' width='300px' />}
       </Space>
     </Space>
   );

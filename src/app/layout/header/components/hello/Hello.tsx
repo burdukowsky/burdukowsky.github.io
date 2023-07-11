@@ -1,17 +1,22 @@
 import { FC } from 'react';
 
 import { Space } from 'app/components/space/Space';
+import { AppText } from 'app/components/text/Text';
 
 export const Hello: FC = () => {
   return (
     <Space direction='column' height='100%' justifyContent='center'>
-      <p>Hi, I'm</p>
+      <AppText as='p' color='primary' size='20px'>
+        Hi, I'm
+      </AppText>
       <h1>
         Stanislav
         <br />
         Burdukowsky
       </h1>
-      <p>Senior Frontend Developer</p>
+      <AppText as='p' size='18px'>
+        Senior Frontend Developer
+      </AppText>
     </Space>
   );
 };

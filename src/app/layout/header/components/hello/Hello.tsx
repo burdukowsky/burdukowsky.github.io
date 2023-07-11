@@ -16,9 +16,7 @@ export const Hello: FC = () => {
         Hi, I'm
       </AppText>
       <AppText as='h1' size='2.8rem'>
-        Stanislav
-        <br />
-        Burdukowsky
+        Stanislav Burdukowsky
       </AppText>
       <AppText as='p' size='1.7rem'>
         Senior Frontend Developer

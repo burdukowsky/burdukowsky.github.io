@@ -1,0 +1,11 @@
+$origin-width: 333px;
+$origin-height: 512px;
+$multiplier: .55;
+
+.Coder {
+  width: $origin-width * $multiplier;
+  height: $origin-height * $multiplier;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}

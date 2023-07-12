@@ -5,6 +5,7 @@ import styles from './ProjectView.module.scss';
 import { Space } from 'app/components/space/Space';
 import { Icon } from 'app/components/icon/Icon';
 import { ProjectLinkContent } from '../project-link-content/ProjectLinkContent';
+import { AppText } from 'app/components/app-text/AppText';
 
 interface Props {
   value: Project;
@@ -22,9 +23,13 @@ export const ProjectView: FC<Props> = ({
     >
       <Space gap='15px' alignItems='center'>
         <Icon name={platform} size='30px' />
-        <h3>{name}</h3>
+        <AppText as='h3' size='1rem'>
+          {name}
+        </AppText>
       </Space>
-      <p>{description}</p>
+      <AppText as='p' size='.9rem'>
+        {description}
+      </AppText>
       <div />
       <Space gap='1em' alignItems='center' justifyContent='space-evenly'>
         {link != null && (

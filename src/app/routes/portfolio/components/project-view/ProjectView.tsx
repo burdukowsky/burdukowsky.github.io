@@ -18,6 +18,7 @@ export const ProjectView: FC<Props> = ({
     <Space
       className={styles.ProjectView}
       direction='column'
+      gap='8px'
       inline
       childrenFlex={[, , 1]}
     >

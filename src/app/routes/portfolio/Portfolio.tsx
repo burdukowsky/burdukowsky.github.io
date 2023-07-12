@@ -49,7 +49,7 @@ export const Portfolio: FC = () => {
   }, []);
 
   return (
-    <Space direction='column'>
+    <Space direction='column' gap='.5em'>
       <AppText as='h2' align='center' className='mt-0'>
         Some of my pet-projects
       </AppText>

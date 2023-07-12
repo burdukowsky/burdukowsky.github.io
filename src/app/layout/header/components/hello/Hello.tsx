@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Space } from 'app/components/space/Space';
 import { AppText } from 'app/components/app-text/AppText';
 import styles from './Hello.module.scss';
+import { Contacts } from '../contacts/Contacts';
 
 export const Hello: FC = () => {
   return (
@@ -21,6 +22,7 @@ export const Hello: FC = () => {
       <AppText as='p' size='1.7rem'>
         Senior Frontend Developer
       </AppText>
+      <Contacts />
     </Space>
   );
 };

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { MenuContainer } from './components/MenuContainer';
+import { MenuContainer } from './components/menu-container/MenuContainer';
 import styles from './Menu.module.scss';
 import { MenuLink } from './components/menu-link/MenuLink';
 

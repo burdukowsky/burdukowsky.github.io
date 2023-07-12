@@ -1,0 +1,8 @@
+.MenuContainerDesktop {
+  height: 100%;
+
+  > div {
+    margin-top: 50vh;
+    transform: translateY(-50%);
+  }
+}

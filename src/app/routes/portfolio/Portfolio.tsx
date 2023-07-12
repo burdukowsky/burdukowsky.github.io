@@ -1,9 +1,10 @@
-import { FC } from 'react';
+import { FC, useMemo } from 'react';
 
 import { Project } from '../../types';
 import { Space } from '../../components/space/Space';
 import { ProjectView } from './components/project-view/ProjectView';
 import { AppText } from '../../components/app-text/AppText';
+import { splitPairs } from '../../utils/common';
 
 const myProjects: Project[] = [
   {
@@ -43,15 +44,25 @@ const myProjects: Project[] = [
 ];
 
 export const Portfolio: FC = () => {
+  const pairs = useMemo(() => {
+    return splitPairs(myProjects);
+  }, []);
+
   return (
     <Space direction='column'>
       <AppText as='h2' align='center'>
         Some of my pet-projects
       </AppText>
-      <Space wrap gap='1em 2em' justifyContent='center'>
-        {myProjects.map((p, i) => (
-          <ProjectView key={i} value={p} />
-        ))}
+      <Space direction='column' gap='1em'>
+        {pairs.map((pair, pairIndex) => {
+          return (
+            <Space key={pairIndex} gap='2em' childrenFlex={['1 1 0', '1 1 0']}>
+              {pair.map((p, i) => (
+                <ProjectView key={i} value={p} />
+              ))}
+            </Space>
+          );
+        })}
       </Space>
     </Space>
   );

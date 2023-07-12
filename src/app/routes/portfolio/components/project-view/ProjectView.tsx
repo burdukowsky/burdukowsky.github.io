@@ -31,7 +31,12 @@ export const ProjectView: FC<Props> = ({
         {description}
       </AppText>
       <div />
-      <Space gap='1em' alignItems='center' justifyContent='space-evenly'>
+      <Space
+        gap='5px 1em'
+        alignItems='center'
+        justifyContent='space-evenly'
+        wrap
+      >
         {link != null && (
           <a href={link} target='_blank' rel='noreferrer'>
             <ProjectLinkContent icon='link'>Link</ProjectLinkContent>

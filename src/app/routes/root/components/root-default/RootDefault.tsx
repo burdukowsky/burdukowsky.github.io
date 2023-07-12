@@ -10,10 +10,10 @@ export const RootDefault: FC = () => {
   return (
     <Space childrenFlex={[1, 3]} height='100%' className={styles.RootDefault}>
       <Menu />
-      <Space direction='column' height='100%' childrenFlex={[1, 1]}>
+      <div className={styles.RootDefaultBody}>
         <Header />
         <Content />
-      </Space>
+      </div>
     </Space>
   );
 };

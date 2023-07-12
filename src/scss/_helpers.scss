@@ -1,0 +1,7 @@
+$directions: ("t": "top", "r": "right", "b": "bottom", "l": "left");
+
+@each $letter, $direction in $directions {
+  .m#{$letter}-0 {
+    margin-#{$direction}: 0;
+  }
+}

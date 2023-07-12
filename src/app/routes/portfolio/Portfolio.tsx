@@ -50,7 +50,7 @@ export const Portfolio: FC = () => {
 
   return (
     <Space direction='column'>
-      <AppText as='h2' align='center'>
+      <AppText as='h2' align='center' className='mt-0'>
         Some of my pet-projects
       </AppText>
       <Space direction='column' gap='1em'>

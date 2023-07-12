@@ -16,7 +16,7 @@ interface Props {
   className?: string;
   style?: CSSProperties;
   childrenFlex?: Array<Property.Flex | undefined>;
-  childrenStyle?: CSSProperties[];
+  childrenStyle?: Array<CSSProperties | undefined>;
 }
 
 export const Space: FCC<Props> = ({

@@ -1,11 +1,5 @@
-@import "~scss/media";
 @import "~scss/vars";
 
 .Content {
-  background-color: var(--surface);
   padding: 0 $section-padding $section-padding $section-padding;
-  overflow: auto; // against collapsing margins
-  @include desktop {
-    height: 100%;
-  }
 }

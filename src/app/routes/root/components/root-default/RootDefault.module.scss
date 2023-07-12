@@ -7,4 +7,9 @@ $shadow-offset-y: 0;
   margin: 0 auto;
   max-width: 1250px;
   box-shadow: $shadow-color $shadow-offset-x $shadow-offset-y $shadow-blur-radius, $shadow-color #{-$shadow-offset-x} $shadow-offset-y $shadow-blur-radius;
+
+  .RootDefaultBody {
+    height: 100%;
+    background-color: var(--surface);
+  }
 }

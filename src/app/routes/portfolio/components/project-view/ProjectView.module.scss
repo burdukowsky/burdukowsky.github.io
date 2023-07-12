@@ -1,5 +1,7 @@
+@import "scss/vars";
+
 .ProjectView {
-  border-radius: 10px;
+  border-radius: $border-radius-base;
   border: 2px solid var(--text-opacity-30);
   padding: 16px;
   width: 100%;

@@ -1,7 +1,48 @@
-.Hello {
-  * {
-    $margin: .15em;
-    margin-top: $margin;
-    margin-bottom: $margin;
+@import "scss/media";
+
+@mixin margins {
+  $margin: .15em;
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
+.HelloHi {
+  color: var(--primary);
+  font-size: 1.8rem;
+  @include margins;
+}
+
+.HelloName {
+  font-size: 2.8rem;
+  @include margins;
+}
+
+.HelloSenior {
+  font-size: 1.7rem;
+  @include margins;
+}
+
+@include mobile {
+  .HelloHi {
+    display: none;
+  }
+
+  .HelloName {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .HelloSenior {
+    font-size: 1rem;
+  }
+}
+
+@include extra-mobile {
+  .HelloName {
+    font-size: 1rem;
+  }
+
+  .HelloSenior {
+    font-size: .8rem;
   }
 }

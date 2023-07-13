@@ -1,4 +1,5 @@
-import { FC } from 'react';
+import { CSSProperties, FC } from 'react';
+import classNames from 'classnames';
 
 import { Project } from 'app/types';
 import styles from './ProjectView.module.scss';
@@ -9,14 +10,21 @@ import { AppText } from 'app/components/app-text/AppText';
 
 interface Props {
   value: Project;
+  border?: boolean;
+  style?: CSSProperties;
 }
 
 export const ProjectView: FC<Props> = ({
   value: { name, platform, description, link, github, downloadLink, demoLink },
+  border,
+  style,
 }) => {
   return (
     <Space
-      className={styles.ProjectView}
+      className={classNames({
+        [styles.ProjectViewWithBorder]: border,
+      })}
+      style={style}
       direction='column'
       gap='8px'
       inline

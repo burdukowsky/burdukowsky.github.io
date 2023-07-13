@@ -1,10 +1,14 @@
-import { FC, useMemo } from 'react';
+import { FC, Fragment, useMemo } from 'react';
 
 import { Project } from '../../types';
 import { Space } from '../../components/space/Space';
 import { ProjectView } from './components/project-view/ProjectView';
 import { AppText } from '../../components/app-text/AppText';
 import { splitPairs } from '../../utils/common';
+import {
+  useExtraMobileMediaQuery,
+  useMobileMediaQuery,
+} from '../../hooks/media-queries';
 
 const myProjects: Project[] = [
   {
@@ -44,26 +48,45 @@ const myProjects: Project[] = [
 ];
 
 export const Portfolio: FC = () => {
+  const extraMobile = useExtraMobileMediaQuery();
+  const mobile = useMobileMediaQuery();
+
   const pairs = useMemo(() => {
     return splitPairs(myProjects);
   }, []);
+
+  const mobileGap = '1.5em';
 
   return (
     <Space direction='column' gap='.5em'>
       <AppText as='h2' align='center' className='mt-0'>
         Some of my pet-projects
       </AppText>
-      <Space direction='column' gap='1em'>
+      <Space direction='column' gap={mobile ? mobileGap : '1em'}>
         {pairs.map((pair, pairIndex) => {
           return (
             <Space
               key={pairIndex}
-              gap='2em'
+              gap={mobile ? mobileGap : '2em'}
               childrenFlex={['1 1 0', '1 1 0']}
               wrap
+              direction={extraMobile ? 'column' : undefined}
             >
               {pair.map((p, i) => (
-                <ProjectView key={i} value={p} />
+                <Fragment key={i}>
+                  <ProjectView
+                    value={p}
+                    border={!extraMobile}
+                    style={{
+                      width: '100%',
+                      height: extraMobile ? undefined : '100%',
+                    }}
+                  />
+                  {extraMobile &&
+                    !(
+                      pairIndex === pairs.length - 1 && i === pair.length - 1
+                    ) && <hr style={{ marginTop: mobileGap }} />}
+                </Fragment>
               ))}
             </Space>
           );

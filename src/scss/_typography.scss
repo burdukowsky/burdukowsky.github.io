@@ -27,3 +27,9 @@ a {
     color: var(--primary-dark);
   }
 }
+
+hr {
+  height: 2px;
+  background: linear-gradient(90deg, red, purple, orange);
+  border: none;
+}

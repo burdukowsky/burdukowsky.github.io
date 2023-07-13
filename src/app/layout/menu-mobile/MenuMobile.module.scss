@@ -19,7 +19,7 @@ $wrap-size: 430px;
   }
 
   > .MenuMobile {
-    box-shadow: rgba(0, 0, 0, .1) -5px -5px 25px, rgba(0, 0, 0, .1) 5px 5px 25px;
+    box-shadow: $box-shadow-base;
     width: 50%;
     height: 50%;
     background-color: var(--primary-dark);

@@ -13,6 +13,7 @@ $text: white;
   border-radius: $border-radius-base;
   padding: 3px 10px;
   line-height: 1;
+  box-shadow: $box-shadow-base;
 
   &:hover {
     background-color: var(--primary-light);

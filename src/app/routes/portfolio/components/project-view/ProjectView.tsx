@@ -24,7 +24,7 @@ export const ProjectView: FC<Props> = ({
     >
       <Space gap='15px' alignItems='center'>
         <Icon name={platform} size='30px' />
-        <AppText as='h3' size='1rem'>
+        <AppText as='h3' size='1rem' className='m-0'>
           {name}
         </AppText>
       </Space>

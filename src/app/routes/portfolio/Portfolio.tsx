@@ -56,7 +56,12 @@ export const Portfolio: FC = () => {
       <Space direction='column' gap='1em'>
         {pairs.map((pair, pairIndex) => {
           return (
-            <Space key={pairIndex} gap='2em' childrenFlex={['1 1 0', '1 1 0']}>
+            <Space
+              key={pairIndex}
+              gap='2em'
+              childrenFlex={['1 1 0', '1 1 0']}
+              wrap
+            >
               {pair.map((p, i) => (
                 <ProjectView key={i} value={p} />
               ))}

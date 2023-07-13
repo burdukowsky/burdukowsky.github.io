@@ -8,7 +8,7 @@ $text: white;
   color: $text;
   border: none;
   cursor: pointer;
-  transition: background-color 150ms;
+  transition: background-color $transition-duration-base;
   font-size: inherit;
   border-radius: $border-radius-base;
   padding: 3px 10px;

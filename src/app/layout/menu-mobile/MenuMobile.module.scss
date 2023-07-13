@@ -1,0 +1,40 @@
+@import "scss/vars";
+
+$menu-margin: .75em;
+$btn-size: 60px;
+$wrap-size: 430px;
+
+.MenuMobileWrap {
+  width: $wrap-size;
+  height: $wrap-size;
+  position: fixed;
+  $offset: -#{calc($wrap-size / 2 - $btn-size * .25)};
+  right: $offset;
+  bottom: $offset;
+  transform: rotate(90deg);
+  transition: transform $transition-duration-base;
+
+  &.MenuMobileActive {
+    transform: none;
+  }
+
+  > .MenuMobile {
+    box-shadow: rgba(0, 0, 0, .1) -5px -5px 25px, rgba(0, 0, 0, .1) 5px 5px 25px;
+    width: 50%;
+    height: 50%;
+    background-color: var(--primary-dark);
+    border-radius: $border-radius-base;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  > .MenuMobileButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: $btn-size;
+    height: $btn-size;
+  }
+}

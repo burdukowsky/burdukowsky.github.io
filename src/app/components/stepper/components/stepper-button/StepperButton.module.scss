@@ -2,13 +2,12 @@
 
 $radius: $border-radius-base;
 $border: 3px;
-$transition-duration: 150ms;
 
 .StepperButton {
   background: linear-gradient(-30deg, red, purple, purple, orange);
   padding: $border;
   border-radius: $radius;
-  transition: background $transition-duration ease-out;
+  transition: background $transition-duration-base ease-out;
   background-size: 200% 100%;
   cursor: pointer;
   border: none;
@@ -39,7 +38,7 @@ $transition-duration: 150ms;
   > .StepperButtonWrap {
     background-color: var(--surface);
     padding: 10px;
-    transition: background-color $transition-duration;
+    transition: background-color $transition-duration-base;
     border-radius: $radius - $border;
   }
 }

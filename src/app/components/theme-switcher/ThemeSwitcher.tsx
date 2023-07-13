@@ -1,6 +1,6 @@
 import { FC, useCallback, useEffect } from 'react';
 
-import { Icon, IconType } from '../icon/Icon';
+import { IconType } from '../icon/Icon';
 import { Button } from '../button/Button';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 import { Theme } from '../../types';
@@ -23,9 +23,5 @@ export const ThemeSwitcher: FC = () => {
     setTheme(theme === 'default' ? 'dark-theme' : 'default');
   }, [setTheme, theme]);
 
-  return (
-    <Button icon onClick={onClick}>
-      <Icon name={map[theme]} size='25px' />
-    </Button>
-  );
+  return <Button icon={map[theme]} iconSize='25px' onClick={onClick} />;
 };

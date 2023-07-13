@@ -15,6 +15,7 @@ export interface XP {
 export interface Edu {
   title: string;
   qualification: string;
+  qualificationProfile: string;
   form: string;
   org: string;
   orgSite?: string;

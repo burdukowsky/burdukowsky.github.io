@@ -7,8 +7,8 @@ import { EducationView } from './components/EducationView';
 const myEdu: Edu[] = [
   {
     title: "Master's Degree",
-    qualification:
-      'Master in "Information Systems and Technologies", profile "Electronic Business"',
+    qualification: 'Master in "Information Systems and Technologies"',
+    qualificationProfile: 'Electronic Business',
     form: 'Full-time',
     org: 'Novosibirsk State University of Economics and Management',
     orgSite: 'https://nsuem.ru/',
@@ -19,8 +19,8 @@ const myEdu: Edu[] = [
   },
   {
     title: "Bachelor's Degree",
-    qualification:
-      'Bachelor in "Fundamental Informatics and IT", profile "Software Engineering"',
+    qualification: 'Bachelor in "Fundamental Informatics and IT"',
+    qualificationProfile: 'Software Engineering',
     form: 'Full-time',
     org: 'Novosibirsk State University of Economics and Management',
     orgSite: 'https://nsuem.ru/',

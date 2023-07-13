@@ -5,7 +5,7 @@ import { AppText } from '../app-text/AppText';
 
 export const LocationView: FCC = ({ children }) => {
   return (
-    <Space as='p' gap='4px' alignItems='center'>
+    <Space gap='4px' alignItems='center'>
       <Icon name='place' />
       <AppText size='1.1rem'>{children}</AppText>
     </Space>

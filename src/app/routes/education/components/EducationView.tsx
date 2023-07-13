@@ -14,6 +14,7 @@ interface Props {
 export const EducationView: FC<Props> = ({
   value: {
     qualification,
+    qualificationProfile,
     form,
     org,
     orgSite,
@@ -24,10 +25,12 @@ export const EducationView: FC<Props> = ({
   },
 }) => {
   return (
-    <Space direction='column'>
-      <h3>{qualification}</h3>
+    <Space direction='column' gap='.5em'>
+      <h3>
+        {qualification}, <br /> profile "{qualificationProfile}"
+      </h3>
 
-      <Space gap='8px' justifyContent='space-between' alignItems='center'>
+      <Space gap='.5em' justifyContent='space-between' alignItems='center' wrap>
         <AppText size='1.1rem'>
           <OrgView name={org} site={orgSite} />
         </AppText>

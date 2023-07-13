@@ -23,12 +23,14 @@ export const ExperienceView: FC<Props> = ({
   },
 }) => {
   return (
-    <Space direction='column'>
-      <Space gap='8px' justifyContent='space-between'>
-        <Space as='h3' gap='8px'>
+    <Space direction='column' gap='.5em'>
+      <Space gap='8px' justifyContent='space-between' alignItems='center' wrap>
+        <Space as='h3' gap='8px' wrap className='m-0'>
           {position}
-          <Icon name='at' />
-          <OrgView name={org} site={orgSite} />
+          <Space gap='8px'>
+            <Icon name='at' />
+            <OrgView name={org} site={orgSite} />
+          </Space>
         </Space>
         <LocationView>{location}</LocationView>
       </Space>

@@ -5,3 +5,7 @@ $directions: ("t": "top", "r": "right", "b": "bottom", "l": "left");
     margin-#{$direction}: 0;
   }
 }
+
+.m-0 {
+  margin: 0;
+}

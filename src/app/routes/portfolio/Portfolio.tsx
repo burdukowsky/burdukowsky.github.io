@@ -10,8 +10,8 @@ export const Portfolio: FC = () => {
   const extraMobile = useExtraMobileMediaQuery();
 
   return (
-    <Space direction='column' gap='.5em'>
-      <AppText as='h2' align='center' className='mt-0'>
+    <Space direction='column' gap='1em'>
+      <AppText as='h2' align='center' className='mt-0 comment'>
         Some of my pet-projects
       </AppText>
       {extraMobile ? <PortfolioMobile /> : <PortfolioDesktop />}

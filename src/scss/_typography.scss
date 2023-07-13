@@ -33,3 +33,12 @@ hr {
   background: linear-gradient(90deg, red, purple, orange);
   border: none;
 }
+
+.comment {
+  &:before {
+    content: '|| ';
+    font-style: italic;
+    color: var(--primary);
+    opacity: .6;
+  }
+}

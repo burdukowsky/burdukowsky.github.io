@@ -6,4 +6,7 @@
   @include desktop {
     min-height: 50vh;
   }
+  @include mobile {
+    padding-bottom: 15px;
+  }
 }

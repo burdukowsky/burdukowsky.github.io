@@ -15,6 +15,8 @@ import { ReactComponent as Mail } from 'icons/mail.svg';
 import { ReactComponent as Phone } from 'icons/phone.svg';
 import { ReactComponent as Telegram } from 'icons/telegram.svg';
 import { ReactComponent as Vk } from 'icons/vk.svg';
+import { ReactComponent as Menu } from 'icons/menu.svg';
+import { ReactComponent as Close } from 'icons/close.svg';
 
 export type IconType =
   | 'darkMode'
@@ -30,7 +32,9 @@ export type IconType =
   | 'mail'
   | 'phone'
   | 'telegram'
-  | 'vk';
+  | 'vk'
+  | 'menu'
+  | 'close';
 
 const icons: Record<IconType, any> = {
   darkMode: DarkMode,
@@ -47,6 +51,8 @@ const icons: Record<IconType, any> = {
   phone: Phone,
   telegram: Telegram,
   vk: Vk,
+  menu: Menu,
+  close: Close,
 };
 
 interface Props {

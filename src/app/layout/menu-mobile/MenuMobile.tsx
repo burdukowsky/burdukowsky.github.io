@@ -33,7 +33,7 @@ export const MenuMobile: FC = () => {
         </Space>
       </div>
       <Button
-        icon='link'
+        icon={active ? 'close' : 'menu'}
         iconSize='35px'
         className={styles.MenuMobileButton}
         onClick={toggle}

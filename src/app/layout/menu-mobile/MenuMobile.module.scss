@@ -8,7 +8,7 @@ $wrap-size: 430px;
   width: $wrap-size;
   height: $wrap-size;
   position: fixed;
-  $offset: -#{calc($wrap-size / 2 - $btn-size * .25)};
+  $offset: -#{calc($wrap-size / 2 - $btn-size * .3)};
   right: $offset;
   bottom: $offset;
   transform: rotate(90deg);
@@ -36,5 +36,8 @@ $wrap-size: 430px;
     transform: translate(-50%, -50%);
     width: $btn-size;
     height: $btn-size;
+    > svg {
+      transform: rotate(-90deg);
+    }
   }
 }

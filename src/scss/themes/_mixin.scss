@@ -1,4 +1,4 @@
-@mixin theme($primary, $background, $surface, $text) {
+@mixin theme($primary, $surface, $text, $gradient-start, $gradient-middle, $gradient-end) {
   $primary-dark: darken($primary, 10%);
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
@@ -10,4 +10,7 @@
   --background-surface: #{darken($surface, 7%)};
   --text: #{$text};
   --text-opacity-30: #{rgba($text, .3)};
+  --gradient-start: #{$gradient-start};
+  --gradient-middle: #{$gradient-middle};
+  --gradient-end: #{$gradient-end};
 }

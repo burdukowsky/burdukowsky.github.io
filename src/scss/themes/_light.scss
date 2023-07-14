@@ -1,5 +1,7 @@
 @import "mixin";
 
+$primary: #F44336;
+
 :root {
-  @include theme(#F44336, #BDBDBD, #FFFFFF, black);
+  @include theme($primary, #FFFFFF, black, $primary, #F49136, $primary);
 }

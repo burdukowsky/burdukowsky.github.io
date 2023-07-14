@@ -30,7 +30,7 @@ a {
 
 hr {
   height: 2px;
-  background: linear-gradient(90deg, red, purple, orange);
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
   border: none;
 }
 

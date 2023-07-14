@@ -4,7 +4,7 @@ $radius: $border-radius-base;
 $border: 3px;
 
 .StepperButton {
-  background: linear-gradient(-30deg, red, purple, purple, orange);
+  background: linear-gradient(-30deg, var(--gradient-start), var(--gradient-middle), var(--gradient-middle), var(--gradient-end));
   padding: $border;
   border-radius: $radius;
   transition: background $transition-duration-base ease-out;

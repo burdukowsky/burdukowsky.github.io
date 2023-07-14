@@ -13,6 +13,11 @@ $wrap-size: 430px;
   bottom: $offset;
   transform: rotate(90deg);
   transition: transform $transition-duration-base;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
 
   &.MenuMobileActive {
     transform: none;

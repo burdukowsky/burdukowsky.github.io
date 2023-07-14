@@ -8,7 +8,7 @@ interface Props {
 
 export const Page: FCC<Props> = ({ title, children }) => {
   return (
-    <Space direction='column' gap='1em'>
+    <Space direction='column' gap='.5em'>
       {title != null && (
         <AppText as='h2' align='center' className='mt-0 comment'>
           {title}

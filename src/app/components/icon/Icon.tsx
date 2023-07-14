@@ -17,6 +17,7 @@ import { ReactComponent as Telegram } from 'icons/telegram.svg';
 import { ReactComponent as Vk } from 'icons/vk.svg';
 import { ReactComponent as Menu } from 'icons/menu.svg';
 import { ReactComponent as Close } from 'icons/close.svg';
+import { ReactComponent as DateRange } from 'icons/date-range.svg';
 
 export type IconType =
   | 'darkMode'
@@ -34,7 +35,8 @@ export type IconType =
   | 'telegram'
   | 'vk'
   | 'menu'
-  | 'close';
+  | 'close'
+  | 'dateRange';
 
 const icons: Record<IconType, any> = {
   darkMode: DarkMode,
@@ -53,6 +55,7 @@ const icons: Record<IconType, any> = {
   vk: Vk,
   menu: Menu,
   close: Close,
+  dateRange: DateRange,
 };
 
 interface Props {

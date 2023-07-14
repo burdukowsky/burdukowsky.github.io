@@ -1,8 +1,24 @@
 @import "scss/vars";
 @import "scss/media";
 
-.ProjectViewWithBorder {
-  border-radius: $border-radius-base;
-  border: 2px solid var(--text-opacity-30);
-  padding: 16px;
+$radius: $border-radius-base;
+$border: 3px;
+
+.ProjectView {
+  > * {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.ProjectViewWithBorder {
+    background: linear-gradient(-30deg, var(--gradient-start), var(--gradient-middle));
+    padding: $border;
+    border-radius: $radius;
+
+    > * {
+      background-color: var(--surface);
+      padding: 16px;
+      border-radius: $radius - $border;
+    }
+  }
 }

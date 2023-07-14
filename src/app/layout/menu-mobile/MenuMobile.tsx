@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from 'react';
+import { FC, TouchEventHandler, useCallback, useState } from 'react';
 import classNames from 'classnames';
 
 import { Button } from '../../components/button/Button';
@@ -13,13 +13,22 @@ export const MenuMobile: FC = () => {
     setActive(!active);
   }, [active]);
 
+  // Фикс странного бага, из-за которого блок MenuMobile скрывается
+  // в мобильном Firefox после тапов.
+  const onTouchEnd = useCallback<TouchEventHandler>(e => {
+    e.preventDefault();
+  }, []);
+
   return (
     <div
       className={classNames(styles.MenuMobileWrap, {
         [styles.MenuMobileActive]: active,
       })}
     >
-      <div className={styles.MenuMobile}>
+      <div
+        className={styles.MenuMobile}
+        onTouchEnd={active ? undefined : onTouchEnd}
+      >
         <Space direction='column' gap='1em'>
           <MenuLink to='/' onClick={toggle}>
             Experience

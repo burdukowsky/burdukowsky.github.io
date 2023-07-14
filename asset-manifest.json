@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.9d3654fa.css",
+    "main.css": "/static/css/main.2792ce50.css",
     "main.js": "/static/js/main.a7e099a0.js",
     "static/js/787.0d2a2e62.chunk.js": "/static/js/787.0d2a2e62.chunk.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
@@ -22,12 +22,12 @@
     "static/media/close.svg": "/static/media/close.906ff68f3665349b5c2dfb165a2b1143.svg",
     "static/media/menu.svg": "/static/media/menu.306ea3a2d6bc3e7d3ae9bd9a5efe3833.svg",
     "static/media/download.svg": "/static/media/download.d2668a9f37edb3ee7be1b2ff3f38e5d5.svg",
-    "main.9d3654fa.css.map": "/static/css/main.9d3654fa.css.map",
+    "main.2792ce50.css.map": "/static/css/main.2792ce50.css.map",
     "main.a7e099a0.js.map": "/static/js/main.a7e099a0.js.map",
     "787.0d2a2e62.chunk.js.map": "/static/js/787.0d2a2e62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d3654fa.css",
+    "static/css/main.2792ce50.css",
     "static/js/main.a7e099a0.js"
   ]
 }

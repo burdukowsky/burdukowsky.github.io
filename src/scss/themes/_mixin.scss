@@ -5,10 +5,11 @@
   --primary-light: #{lighten($primary, 10%)};
   --surface: #{$surface};
   --surface-opacity-80: #{rgba($surface, .8)};
-  --background-primary: #{darken($primary-dark, 7%)};
+  --background-primary: #{darken($primary-dark, 10%)};
   --background-surface: #{darken($surface, 7%)};
   --text: #{$text};
   --gradient-start: #{$gradient-start};
   --gradient-middle: #{$gradient-middle};
   --gradient-end: #{$gradient-end};
+  --menu-background: #{darken($primary-dark, 5%)};
 }

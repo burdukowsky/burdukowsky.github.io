@@ -1,7 +1,9 @@
 @import "mixin";
 
-$gradient-start: #83489e;
+$primary: #039BE5;
+$gradient-start: $primary;
+$gradient-middle: #0097A7;
 
 html.dark-theme {
-  @include theme(#C69749, #282A3A, white, $gradient-start, #c5302e, $gradient-start);
+  @include theme($primary, #282A3A, white, $gradient-start, $gradient-middle, $gradient-start);
 }

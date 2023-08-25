@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.7ea5fb8d.css",
-    "main.js": "/static/js/main.a7e099a0.js",
+    "main.js": "/static/js/main.90deb1ac.js",
     "static/js/787.0d2a2e62.chunk.js": "/static/js/787.0d2a2e62.chunk.js",
     "static/media/Exo2-VariableFont_wght.ttf": "/static/media/Exo2-VariableFont_wght.718ec91358aa7ee8083b.ttf",
+    "static/media/habr.svg": "/static/media/habr.dd4c03f76698d47d88ecfc5adb948245.svg",
     "index.html": "/index.html",
+    "static/media/hh.svg": "/static/media/hh.b8256ad34603f1eeb0ef145863b37a2e.svg",
     "static/media/vk.svg": "/static/media/vk.ca7a889400d52fe7d0427fdbacc17aed.svg",
     "static/media/light-mode.svg": "/static/media/light-mode.95af6a2ff7517d018982632cd4dff932.svg",
     "static/media/github.svg": "/static/media/github.a6197c9138023b017298b4e4c601405d.svg",
@@ -23,11 +25,11 @@
     "static/media/menu.svg": "/static/media/menu.306ea3a2d6bc3e7d3ae9bd9a5efe3833.svg",
     "static/media/download.svg": "/static/media/download.d2668a9f37edb3ee7be1b2ff3f38e5d5.svg",
     "main.7ea5fb8d.css.map": "/static/css/main.7ea5fb8d.css.map",
-    "main.a7e099a0.js.map": "/static/js/main.a7e099a0.js.map",
+    "main.90deb1ac.js.map": "/static/js/main.90deb1ac.js.map",
     "787.0d2a2e62.chunk.js.map": "/static/js/787.0d2a2e62.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7ea5fb8d.css",
-    "static/js/main.a7e099a0.js"
+    "static/js/main.90deb1ac.js"
   ]
 }

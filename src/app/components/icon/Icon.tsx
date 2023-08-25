@@ -18,6 +18,8 @@ import { ReactComponent as Vk } from 'icons/vk.svg';
 import { ReactComponent as Menu } from 'icons/menu.svg';
 import { ReactComponent as Close } from 'icons/close.svg';
 import { ReactComponent as DateRange } from 'icons/date-range.svg';
+import { ReactComponent as Habr } from 'icons/habr.svg';
+import { ReactComponent as Hh } from 'icons/hh.svg';
 
 export type IconType =
   | 'darkMode'
@@ -36,7 +38,9 @@ export type IconType =
   | 'vk'
   | 'menu'
   | 'close'
-  | 'dateRange';
+  | 'dateRange'
+  | 'habr'
+  | 'hh';
 
 const icons: Record<IconType, any> = {
   darkMode: DarkMode,
@@ -56,6 +60,8 @@ const icons: Record<IconType, any> = {
   menu: Menu,
   close: Close,
   dateRange: DateRange,
+  habr: Habr,
+  hh: Hh,
 };
 
 interface Props {

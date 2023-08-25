@@ -36,6 +36,22 @@ export const Contacts: FC = () => {
       >
         <Icon name='telegram' />
       </a>
+      <a
+        href='https://career.habr.com/stas6386778'
+        target='_blank'
+        rel='noreferrer'
+        title='Habr Career'
+      >
+        <Icon name='habr' />
+      </a>
+      <a
+        href='https://novosibirsk.hh.ru/applicant/resumes/view?resume=6e59f6a2ff034cc72e0039ed1f43534759454d'
+        target='_blank'
+        rel='noreferrer'
+        title='Head Hunter'
+      >
+        <Icon name='hh' />
+      </a>
     </Space>
   );
 };

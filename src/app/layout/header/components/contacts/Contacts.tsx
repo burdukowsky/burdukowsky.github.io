@@ -6,9 +6,9 @@ import { Icon } from 'app/components/icon/Icon';
 export const Contacts: FC = () => {
   return (
     <Space gap='10px' alignItems='center'>
-      <a href='tel:+79137533394' title='Phone'>
-        <Icon name='phone' />
-      </a>
+      {/*<a href='tel:+79137533394' title='Phone'>*/}
+      {/*  <Icon name='phone' />*/}
+      {/*</a>*/}
       <a href='mailto:burdukowskystas@gmail.com' title='E-Mail'>
         <Icon name='mail' />
       </a>

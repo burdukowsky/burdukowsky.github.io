@@ -11,6 +11,7 @@ import { ReactComponent as Download } from 'icons/download.svg';
 import { ReactComponent as Github } from 'icons/github.svg';
 import { ReactComponent as Link } from 'icons/link.svg';
 import { ReactComponent as Npm } from 'icons/npm.svg';
+import { ReactComponent as Java } from 'icons/java.svg';
 import { ReactComponent as Mail } from 'icons/mail.svg';
 import { ReactComponent as Phone } from 'icons/phone.svg';
 import { ReactComponent as Telegram } from 'icons/telegram.svg';
@@ -32,6 +33,7 @@ export type IconType =
   | 'github'
   | 'link'
   | 'npm'
+  | 'java'
   | 'mail'
   | 'phone'
   | 'telegram'
@@ -53,6 +55,7 @@ const icons: Record<IconType, any> = {
   github: Github,
   link: Link,
   npm: Npm,
+  java: Java,
   mail: Mail,
   phone: Phone,
   telegram: Telegram,

@@ -9,9 +9,10 @@ export const myXp: XP[] = [
     to: 'Ongoing',
     location: 'Novosibirsk, Russia',
     responsibilities: [
-      'Development and support of a front-end business analytics project (development with React, Hooks, Redux Toolkit, Styled Components)',
+      'Developing and support of a front-end business analytics project (Single SPA, React, Hooks, Redux Toolkit, LESS, Styled Components, G2Plot, Storybook)',
       'Managing a development team (two subordinates)',
-      'Development of the OpenAPI specification',
+      'Writing an OpenAPI specification',
+      'Developing a UI library for microfrontends with Storybook',
     ],
     achievements: [
       'Project development from scratch and bringing to production',

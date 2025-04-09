@@ -25,7 +25,7 @@ export interface Edu {
   achievements?: string[];
 }
 
-export type ProjectPlatform = 'android' | 'npm' | 'extension';
+export type ProjectPlatform = 'android' | 'npm' | 'extension' | 'java';
 
 export interface Project {
   name: string;

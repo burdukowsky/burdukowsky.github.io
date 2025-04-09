@@ -20,6 +20,13 @@ export const myProjects: Project[] = [
     demoLink: 'https://burdukowsky.github.io/cron-editor-ngx-translate/',
   },
   {
+    name: 'keenetic-policy-changer-java',
+    platform: 'java',
+    description:
+      'Changes the policy for a specific device by MAC address on the Keenetic router via Telnet protocol.',
+    github: 'https://github.com/burdukowsky/keenetic-policy-changer-java',
+  },
+  {
     name: 'Copy Page URL',
     platform: 'extension',
     description:
